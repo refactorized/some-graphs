@@ -1,0 +1,46 @@
+digraph {
+    rankdir=LR
+    { 
+        Chaos 
+        Gaia 
+        Tartarus
+        Eros
+    }
+
+    Chaos -> {Erebus Nyx}
+    {Erebus Nyx} -> {Nyx_Erebus} -> {Aether Hemera}
+    Gaia -> { Uranus Ourea Pontus }
+
+
+    {Uranus Gaia} -> Uranus_Gaia
+
+    {Uranus_Gaia} -> {
+        subgraph cluster_Titans {
+            label="The Twelve Titans"
+            Oceanus
+            Coeus
+            Crius
+            Hyperion
+            Iapetus
+            Theia
+            Rhea
+            Themis
+            Mnemosyne
+            Phoebe
+            Tethys
+            Cronus
+        }
+        subgraph cluster_Cyclopes {
+            label="The Cyclopes"
+            Brontes
+            Steropes
+            Arges
+        }
+        subgraph cluster_Hecton { 
+            label="The Hecatoncheires (Hundred-Handers)"
+            Cottus
+            Briareos
+            Gyges
+        }
+    }
+}
